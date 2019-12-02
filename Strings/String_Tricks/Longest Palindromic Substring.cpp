@@ -98,6 +98,4 @@ string Solution::longestPalindrome(string A) {
         }
     }
     return A.substr(start, maxlength);
-    
-    
 }
