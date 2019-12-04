@@ -21,9 +21,27 @@ It reduces to a simple recursion after this.
 
 */
 
+
+
 int Solution::gcd(int A, int B) {
     if( B == 0 )
         return A;
     return gcd( B, A % B );
 }
 
+/*
+Another solution involving just the usage of GCD(A, B) = GCD(A - B, B) for A>B, is given below.
+*/
+/*
+
+int Solution::gcd(int A, int B) {
+    if( B == 0 )
+        return A;
+    if( A == 0 )
+        return B;
+    if( A > B)
+        return gcd(A-B, B);
+    return gcd(A, B - A);    
+}
+
+*/
