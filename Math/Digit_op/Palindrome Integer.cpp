@@ -40,3 +40,39 @@ int Solution::isPalindrome(int A) {
         return false;
     }
 }
+
+
+// Solution 2 - Keep checking the one's digit and the  highest digit, if at a point they're unequal, return false, otherwise return true.
+
+/*
+int Solution::isPalindrome(int A) {
+    
+    if(A < 0){
+        return false;
+    }
+    
+    int size = 0;
+    auto tmp = A;
+    
+    while(tmp != 0){
+        ++size;
+        tmp /= 10;
+    }
+    tmp = A;
+    int k = size - 1;
+    while(tmp != 0){
+        int hd = (tmp / pow(10, k));
+        int ld = (tmp % 10);
+        
+        if( ld != hd ){
+            return false;
+        }
+        
+        tmp = tmp - (hd * pow(10, k));
+        tmp = tmp / 10;
+        
+        k -= 2;
+    }
+    return true;
+}
+*/
